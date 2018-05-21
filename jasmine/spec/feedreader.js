@@ -46,9 +46,9 @@ $(function() {
 
         // test that ensures the menu changes visibility when the menu icon is clicked
         it('menu changes visibility when clicked', function() {
-            $('.menu-icon-link').trigger('click');
+            $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toEqual(false);
-            $('.menu-icon-link').trigger('click');
+            $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toEqual(true);
         });
     });
