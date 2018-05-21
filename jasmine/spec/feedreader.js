@@ -78,12 +78,11 @@ $(function() {
         beforeEach(function (done) {
             $('.feed').empty();
             loadFeed(0, function() {
-                oldFeed = $('.feed').find(allFeeds.url);
-                done();
-            });
-            loadFeed(1, function() {
-                newFeed = $('.feed').find(allFeeds.url);
-                done();
+                oldFeed = $('.feed').html();
+                loadFeed(1, function() {
+                    newFeed = $('.feed').html();
+                    done();
+                });
             });
         });
 
