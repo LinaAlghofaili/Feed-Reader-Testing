@@ -64,7 +64,7 @@ $(function() {
 
         // test that there is at least a single .entry element within the .feed container
         it('ensure if there is at least a single entry', function() {
-            expect($('.entry .feed')).toBeDefined();
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
